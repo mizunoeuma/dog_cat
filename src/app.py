@@ -18,7 +18,7 @@ def predict(img):
     # py ファイルのディレクトリに基づく相対パスでファイルを指定
     
     # 学習済みモデルの重み（dog_cat.pt）を読み込み
-    net.load_state_dict(torch.load('src/dog_cat_weights_1CNN.pt', map_location=torch.device('cpu')))
+    net.load_state_dict(torch.load('dog_cat_weights_1CNN.pt', map_location=torch.device('cpu')))
     #　データの前処理
     img = transform(img)
     # (batch_size, channel, height, width) の形式に変換
